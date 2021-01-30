@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meR-Gn-31W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meR-Gn-31W">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,12 +55,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.023529411764705882" green="0.12156862745098039" blue="0.27058823529411763" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="MDi-ex-9aG" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5Z7-yA-pb1"/>
                             <constraint firstItem="MDi-ex-9aG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M85-8E-xpj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Cocktail Maker" id="9Jj-VS-GnK"/>
                 </viewController>
@@ -73,7 +75,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Y0g-3Y-usg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="LGM-JY-hPD">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -97,7 +99,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <segue destination="nVs-Aj-rqM" kind="show" identifier="ShowDetailFromTableSegue" id="vOk-Bd-udO"/>
                                 </connections>
@@ -161,6 +163,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="80M-nE-FQy"/>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.1215686275" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="PeF-Q8-gcy" firstAttribute="leading" secondItem="80M-nE-FQy" secondAttribute="leading" id="BvJ-xC-EXo"/>
@@ -174,7 +177,6 @@
                             <constraint firstItem="jze-w1-3Cw" firstAttribute="leading" secondItem="80M-nE-FQy" secondAttribute="leading" id="gYe-UU-Ejf"/>
                             <constraint firstAttribute="bottom" secondItem="jze-w1-3Cw" secondAttribute="bottom" constant="34" id="mfr-Mb-aVP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="80M-nE-FQy"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4aC-7L-HtY"/>
                     <connections>
@@ -200,7 +202,8 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <viewLayoutGuide key="safeArea" id="oO4-8h-0Zm"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <accessibility key="accessibilityConfiguration" identifier="LoadingView"/>
                     <constraints>
                         <constraint firstItem="RqK-Su-LHs" firstAttribute="top" secondItem="Ezs-iy-uNL" secondAttribute="top" id="MkJ-Of-mNs"/>
@@ -208,7 +211,6 @@
                         <constraint firstAttribute="trailing" secondItem="RqK-Su-LHs" secondAttribute="trailing" id="eZY-Tb-i3P"/>
                         <constraint firstAttribute="bottom" secondItem="RqK-Su-LHs" secondAttribute="bottom" id="gxG-E1-TeE"/>
                     </constraints>
-                    <viewLayoutGuide key="safeArea" id="oO4-8h-0Zm"/>
                 </view>
             </objects>
             <point key="canvasLocation" x="1677" y="230"/>
@@ -241,8 +243,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vOk-Bd-udO"/>
-        <segue reference="pJW-yO-XUd"/>
+        <segue reference="y4x-Gq-QuQ"/>
+        <segue reference="1JH-3Q-o2m"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="2909" width="4646" height="3717"/>
@@ -250,5 +252,8 @@
         <image name="LetterWhite" width="320" height="73"/>
         <image name="Name" width="320" height="73"/>
         <image name="Random" width="320" height="72"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
