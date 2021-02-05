@@ -26,7 +26,7 @@ class DetailCocktailViewController: UIViewController {
     var cocktailResult: CocktailResults?
     var buttonPressed: SearchType?
     var cocktailID: IngredientSearch?
-    var favoriteCocktails: CocktailResults?
+    var favoriteCocktails: FavoriteCocktail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -180,6 +180,7 @@ class DetailCocktailViewController: UIViewController {
         guard let cocktailResult = cocktailResult else { return }
         favoriteCocktails?.favorites.append(cocktailResult)
         print("Saved Cocktail: \(cocktailResult)")
+        print("Favorites : \(String(describing: favoriteCocktails?.favorites))")
         
     }
     

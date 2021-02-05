@@ -10,7 +10,7 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
 
-    var cocktailFavorites:CocktailResults? {
+    var cocktailFavorites:FavoriteCocktail? {
         didSet {
             tableView.reloadData()
         }

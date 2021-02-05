@@ -107,7 +107,11 @@
                             <constraint firstItem="AM6-hn-Wx1" firstAttribute="top" secondItem="012-Wd-T8C" secondAttribute="top" id="Qkp-VI-7jR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="nVG-pk-tSh"/>
+                    <navigationItem key="navigationItem" title="Favorites" id="nVG-pk-tSh">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="h24-dT-3KI">
+                            <color key="tintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ml-lb-NsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

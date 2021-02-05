@@ -35,8 +35,6 @@ struct CocktailResults: Codable {
     let measurement10: String?
     
     let instructions: String
-    
-    var favorites:[CocktailResults] = []
  
     enum CodingKeys: String, CodingKey {
         case drinkName = "strDrink"
@@ -70,4 +68,8 @@ struct CocktailResults: Codable {
 
 struct DrinksResults: Codable {
     let drinks: [CocktailResults]
+}
+
+struct FavoriteCocktail: Codable {
+    var favorites: [CocktailResults]
 }
