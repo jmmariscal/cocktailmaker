@@ -21,6 +21,7 @@
 		3AF30476242C447B00784122 /* CocktailResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF30475242C447B00784122 /* CocktailResultController.swift */; };
 		3AF30481242D669400784122 /* DetailCocktailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF30480242D669400784122 /* DetailCocktailViewController.swift */; };
 		3AF30483242D825400784122 /* CocktailMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF30482242D825400784122 /* CocktailMakerViewController.swift */; };
+		AFA3642D25C517E8003771F3 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3642C25C517E8003771F3 /* FavoritesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		3AF30475242C447B00784122 /* CocktailResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailResultController.swift; sourceTree = "<group>"; };
 		3AF30480242D669400784122 /* DetailCocktailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCocktailViewController.swift; sourceTree = "<group>"; };
 		3AF30482242D825400784122 /* CocktailMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailMakerViewController.swift; sourceTree = "<group>"; };
+		AFA3642C25C517E8003771F3 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				3AF30482242D825400784122 /* CocktailMakerViewController.swift */,
 				3AA8BB712431673400D08799 /* CocktailTableViewController.swift */,
 				3AF30480242D669400784122 /* DetailCocktailViewController.swift */,
+				AFA3642C25C517E8003771F3 /* FavoritesTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF30448242AFCC200784122 /* AppDelegate.swift in Sources */,
+				AFA3642D25C517E8003771F3 /* FavoritesTableViewController.swift in Sources */,
 				3AA8BB782433EAB400D08799 /* IngredientSearch.swift in Sources */,
 				3AA8BB722431673400D08799 /* CocktailTableViewController.swift in Sources */,
 				3AA8BB6E242EFE4200D08799 /* UIView+Extension.swift in Sources */,

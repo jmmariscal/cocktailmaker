@@ -26,6 +26,7 @@ class DetailCocktailViewController: UIViewController {
     var cocktailResult: CocktailResults?
     var buttonPressed: SearchType?
     var cocktailID: IngredientSearch?
+    var favoriteCocktails: CocktailResults?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,4 +174,13 @@ class DetailCocktailViewController: UIViewController {
             IngredientsTextView.text += "- \(ingredient[i]): \(measurement[i])\n"
         }
     }
+    
+    // MARK: IBActions
+    @IBAction func saveBtnTapped(_ sender: Any) {
+        guard let cocktailResult = cocktailResult else { return }
+        favoriteCocktails?.favorites.append(cocktailResult)
+        print("Saved Cocktail: \(cocktailResult)")
+        
+    }
+    
 }

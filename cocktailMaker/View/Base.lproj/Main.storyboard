@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meR-Gn-31W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="meR-Gn-31W">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,11 +62,56 @@
                             <constraint firstItem="MDi-ex-9aG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="M85-8E-xpj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cocktail Maker" id="9Jj-VS-GnK"/>
+                    <navigationItem key="navigationItem" title="Cocktail Maker" id="9Jj-VS-GnK">
+                        <barButtonItem key="rightBarButtonItem" systemItem="organize" id="gQk-tt-b18">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <segue destination="eFF-Sj-u29" kind="show" id="UXr-ME-0i8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="57" y="-173"/>
+        </scene>
+        <!--Favorites-->
+        <scene sceneID="Q1e-z0-d9G">
+            <objects>
+                <viewController id="eFF-Sj-u29" customClass="FavoritesViewController" customModule="cocktailMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BK1-fu-dMr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM6-hn-Wx1">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="TSK-0L-SQ0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TSK-0L-SQ0" id="QQb-vY-WJO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="012-Wd-T8C"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="012-Wd-T8C" firstAttribute="trailing" secondItem="AM6-hn-Wx1" secondAttribute="trailing" id="2Na-aL-521"/>
+                            <constraint firstItem="AM6-hn-Wx1" firstAttribute="leading" secondItem="012-Wd-T8C" secondAttribute="leading" id="BWH-rB-cam"/>
+                            <constraint firstItem="012-Wd-T8C" firstAttribute="bottom" secondItem="AM6-hn-Wx1" secondAttribute="bottom" id="Cp0-ZW-OXC"/>
+                            <constraint firstItem="AM6-hn-Wx1" firstAttribute="top" secondItem="012-Wd-T8C" secondAttribute="top" id="Qkp-VI-7jR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="nVG-pk-tSh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9ml-lb-NsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="57" y="546"/>
         </scene>
         <!--Cocktail Table View Controller-->
         <scene sceneID="KB4-os-jY1">
@@ -178,7 +223,13 @@
                             <constraint firstAttribute="bottom" secondItem="jze-w1-3Cw" secondAttribute="bottom" constant="34" id="mfr-Mb-aVP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4aC-7L-HtY"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4aC-7L-HtY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ycM-qt-33K">
+                            <connections>
+                                <action selector="saveBtnTapped:" destination="nVs-Aj-rqM" id="OG9-5l-gh2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="IngredientsTextView" destination="rtq-lp-EKd" id="jcp-Qu-m9A"/>
                         <outlet property="drinkNameLabel" destination="PeF-Q8-gcy" id="rtL-TP-tZ0"/>
@@ -243,7 +294,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="y4x-Gq-QuQ"/>
+        <segue reference="vOk-Bd-udO"/>
         <segue reference="1JH-3Q-o2m"/>
     </inferredMetricsTieBreakers>
     <resources>
