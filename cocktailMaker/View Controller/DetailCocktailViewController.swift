@@ -26,7 +26,6 @@ class DetailCocktailViewController: UIViewController {
     var cocktailResult: CocktailResults?
     var buttonPressed: SearchType?
     var cocktailID: IngredientSearch?
-    var favoriteCocktails: FavoriteCocktail?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -177,11 +176,7 @@ class DetailCocktailViewController: UIViewController {
     
     // MARK: IBActions
     @IBAction func saveBtnTapped(_ sender: Any) {
-        guard let cocktailResult = cocktailResult else { return }
-        favoriteCocktails?.favorites.append(cocktailResult)
-        print("Saved Cocktail: \(cocktailResult)")
-        print("Favorites : \(String(describing: favoriteCocktails?.favorites))")
-        
+        cocktailResultController.saveFavoriteCocktail(cocktail: cocktailResult)
     }
     
 }

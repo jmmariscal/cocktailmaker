@@ -10,11 +10,7 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
 
-    var cocktailFavorites:FavoriteCocktail? {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    var cocktailFavorites = CocktailResultController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,14 +18,14 @@ class FavoritesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cocktailFavorites?.favorites.count ?? 0
+        return cocktailFavorites.favoriteCocktails.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteCell", for: indexPath)
-        let favoriteDrink = cocktailFavorites?.favorites[indexPath.row]
-        cell.textLabel?.text = favoriteDrink?.drinkName
+        let favoriteDrink = cocktailFavorites.favoriteCocktails[indexPath.row]
+        cell.textLabel?.text = favoriteDrink.drinkName
         
 
         return cell

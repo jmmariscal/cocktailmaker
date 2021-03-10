@@ -361,13 +361,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MMSJ2DXRDG;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
 				INFOPLIST_FILE = cocktailMaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thecoderpilot.cocktailMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariscalDevelopment.cocktailMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -379,13 +379,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MMSJ2DXRDG;
+				DEVELOPMENT_TEAM = 37Y3Y57488;
 				INFOPLIST_FILE = cocktailMaker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.thecoderpilot.cocktailMaker;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariscalDevelopment.cocktailMaker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

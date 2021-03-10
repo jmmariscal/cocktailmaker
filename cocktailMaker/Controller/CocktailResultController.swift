@@ -15,6 +15,7 @@ class CocktailResultController {
     //To store our cocktails
     var cocktailResults: DrinksResults?
     var ingredientResults: IngredientDrinks?
+    var favoriteCocktails: [CocktailResults] = []
     
     //We want to keep track of our possible errors
     enum NetworkError: Error {
@@ -59,6 +60,10 @@ class CocktailResultController {
         var url: URL {
             return URL(string: stringValue)!
         }
+    }
+    
+    init() {
+        loadFromPersistentStore()
     }
     
     // MARK: - Functions
@@ -228,5 +233,51 @@ class CocktailResultController {
                 return
             }
         }.resume()
+    }
+    
+    func saveFavoriteCocktail(cocktail: CocktailResults?) {
+        guard let cocktailResult = cocktail else { return }
+        favoriteCocktails.append(cocktailResult)
+        saveToPersistentStore()
+        print("Saved Cocktail: \(cocktailResult.drinkName)")
+        print("Favorites : \(String(describing: favoriteCocktails.count))")
+    }
+    
+    // MARK: Save and Load to persistent store
+    private var persistentFileURL: URL? {
+      let fileManager = FileManager.default
+      guard let documents = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first
+        else { return nil }
+       
+      return documents.appendingPathComponent("favoriteCocktail.plist")
+    }
+    
+    public func saveToPersistentStore() {
+        
+        // Stars -> Data -> Plist
+        guard let url = persistentFileURL else { return }
+        
+        do {
+            let encoder = PropertyListEncoder()
+            let data = try encoder.encode(favoriteCocktails)
+            try data.write(to: url)
+        } catch {
+            print("Error saving stars data: \(error)")
+        }
+    }
+    
+    public func loadFromPersistentStore() {
+        
+        // Plist -> Data -> Stars
+        let fileManager = FileManager.default
+        guard let url = persistentFileURL, fileManager.fileExists(atPath: url.path) else { return }
+        
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = PropertyListDecoder()
+            favoriteCocktails = try decoder.decode([CocktailResults].self, from: data)
+        } catch {
+            print("error loading stars data: \(error)")
+        }
     }
 }

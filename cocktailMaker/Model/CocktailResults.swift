@@ -69,7 +69,3 @@ struct CocktailResults: Codable {
 struct DrinksResults: Codable {
     let drinks: [CocktailResults]
 }
-
-struct FavoriteCocktail: Codable {
-    var favorites: [CocktailResults]
-}

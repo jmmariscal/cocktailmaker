@@ -66,7 +66,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="organize" id="gQk-tt-b18">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <segue destination="eFF-Sj-u29" kind="show" id="UXr-ME-0i8"/>
+                                <segue destination="blR-R4-hst" kind="show" id="aWg-0d-hht"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -76,46 +76,45 @@
             <point key="canvasLocation" x="57" y="-173"/>
         </scene>
         <!--Favorites-->
-        <scene sceneID="Q1e-z0-d9G">
+        <scene sceneID="qQy-Ya-adh">
             <objects>
-                <viewController id="eFF-Sj-u29" customClass="FavoritesViewController" customModule="cocktailMaker" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="BK1-fu-dMr">
+                <tableViewController id="blR-R4-hst" customClass="FavoritesTableViewController" customModule="cocktailMaker" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N2u-zr-Vj6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AM6-hn-Wx1">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" id="TSK-0L-SQ0">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TSK-0L-SQ0" id="QQb-vY-WJO">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="012-Wd-T8C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="012-Wd-T8C" firstAttribute="trailing" secondItem="AM6-hn-Wx1" secondAttribute="trailing" id="2Na-aL-521"/>
-                            <constraint firstItem="AM6-hn-Wx1" firstAttribute="leading" secondItem="012-Wd-T8C" secondAttribute="leading" id="BWH-rB-cam"/>
-                            <constraint firstItem="012-Wd-T8C" firstAttribute="bottom" secondItem="AM6-hn-Wx1" secondAttribute="bottom" id="Cp0-ZW-OXC"/>
-                            <constraint firstItem="AM6-hn-Wx1" firstAttribute="top" secondItem="012-Wd-T8C" secondAttribute="top" id="Qkp-VI-7jR"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Favorites" id="nVG-pk-tSh">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="h24-dT-3KI">
-                            <color key="tintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9ml-lb-NsM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoriteCell" textLabel="j5E-Qf-qbe" style="IBUITableViewCellStyleDefault" id="RuS-qK-jiR">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RuS-qK-jiR" id="wme-Tx-yf9">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j5E-Qf-qbe">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nVs-Aj-rqM" kind="show" id="xnn-jY-dsv"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="blR-R4-hst" id="8aC-u1-GdC"/>
+                            <outlet property="delegate" destination="blR-R4-hst" id="svU-6T-wkO"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Favorites" id="esG-lp-cb9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Evr-8u-yLT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="57" y="546"/>
+            <point key="canvasLocation" x="746" y="552"/>
         </scene>
         <!--Cocktail Table View Controller-->
         <scene sceneID="KB4-os-jY1">
@@ -298,7 +297,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vOk-Bd-udO"/>
+        <segue reference="xnn-jY-dsv"/>
         <segue reference="1JH-3Q-o2m"/>
     </inferredMetricsTieBreakers>
     <resources>
